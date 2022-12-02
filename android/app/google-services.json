@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "257323055791",
+    "project_id": "mabes-app-396ed",
+    "storage_bucket": "mabes-app-396ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257323055791:android:1d56d7290f94d4afd7b25a",
+        "android_client_info": {
+          "package_name": "com.demornfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257323055791-t4p3mudlrm7elvtuodrq32vtot3i6plb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJCHTXA_zgAJONlWF7FwnyK_5Hxl4PZWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257323055791-t4p3mudlrm7elvtuodrq32vtot3i6plb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
