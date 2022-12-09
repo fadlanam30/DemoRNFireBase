@@ -46,17 +46,9 @@ const HomeDetail = ({
                                     fontWeight: 'bold'
                                 }}
                             >
-                                Hello {user.name}
-                                There is no inbox arround here..
+                                Hello {user.name} There is no inbox arround here..
                             </Text>
-                            <Text
-                                style={{
-                                    textAlign: 'center',
-                                    fontSize: 1,
-                                }}
-                            >
-                                There is no inbox arround here..
-                            </Text>
+                            
                         </View>
                     )}
                     renderItem={
