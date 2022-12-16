@@ -1,7 +1,9 @@
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList, RefreshControl } from 'react-native'
 import React from 'react'
 import { ActivityIndicator, Appbar, FAB, useTheme } from 'react-native-paper'
-import InboxItem from '../../components/InboxItem'
+import InboxItem from '../../components/Item/InboxItem'
+import Spacer from '../../components/Spacer'
+import { useNavigation } from '@react-navigation/native'
 
 const HomeDetail = ({
     user,
@@ -9,7 +11,9 @@ const HomeDetail = ({
     isLoading,
     onSignOut,
     onAddButton,
+    onRefresh
 }) => {
+    const navigation = useNavigation()
     const theme = useTheme()
 
     console.log('inboxess', inboxes)
@@ -48,12 +52,18 @@ const HomeDetail = ({
                             >
                                 Hello {user.name} There is no inbox arround here..
                             </Text>
-                            
+
                         </View>
                     )}
+                    refreshControl={
+                        <RefreshControl refreshing={isLoading} onRefresh={onRefresh} />
+                    }
                     renderItem={
                         ({ item }) => (
-                            <InboxItem inbox={item} />
+                            <InboxItem
+                                inbox={item}
+                                onPress={() => navigation.navigate('RoomChatScreen', {selectedId: item.id, userName: item.userName, roomId: item.roomId})}
+                            />
                         )
                     }
                 />
